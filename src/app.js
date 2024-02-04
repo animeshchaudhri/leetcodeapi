@@ -17,7 +17,7 @@ fs.createReadStream(csvFilePath)
   });
 
 
-app.get('/api/query', (req, res) => {
+app.get('/query', (req, res) => {
   const { companies } = req.query;
 
   
