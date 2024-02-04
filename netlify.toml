@@ -1,0 +1,6 @@
+[build]
+  command = "npm install && npm run build"  # Add your build command if needed
+  functions = "functions"
+
+[dev]
+  functions = "functions"
