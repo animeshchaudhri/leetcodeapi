@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>LeetCode API Documentation</title>
+</head>
+<body class="container mt-5">
+  <h1 class="mb-4">LC_Grind API Documentation</h1>
+  
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Company-wise Questions</h2>
+      <p class="card-text">Retrieve questions specific to a company.</p>
+      <code>/specific?companies={companyName}</code>
+      <p class="card-text mt-2">Example:</p>
+      <code>/specific?companies=Google</code>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-body">
+      <h2 class="card-title">Query Questions by Company</h2>
+      <p class="card-text">Query questions based on one or more companies.</p>
+      <code>/query?companies={companyName}</code>
+      <p class="card-text mt-2">Example:</p>
+      <code>/query?companies=Google</code>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-body">
+      <h2 class="card-title">Difficulty Levels</h2>
+      <p class="card-text">Retrieve questions based on difficulty.</p>
+      <ul>
+        <li><code>/easy</code> - Easy questions</li>
+        <li><code>/medium</code> - Medium questions</li>
+        <li><code>/hard</code> - Hard questions</li>
+      </ul>
+      <p class="card-text mt-2">Examples:</p>
+      <code>/easy</code><br>
+      <code>/medium</code><br>
+      <code>/hard</code>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

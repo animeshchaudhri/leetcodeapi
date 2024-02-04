@@ -27,7 +27,8 @@ const PORT = process.env.PORT || 3000;
 
 
 app.get('/', (req, res) => {
-  res.send('welcome to leetcode api docs will be available soon xd');
+  const indexPath = 'index.html';  // Assuming index.html is in the same directory
+  res.sendFile(indexPath, { root: __dirname });
 });
 
 app.get('/query', async (req, res) => {
