@@ -27,7 +27,7 @@ const PORT = process.env.PORT || 3000;
 
 
 app.get('/', (req, res) => {
-  res.send('welcome to leetcode api docs will be avaible soon xd');
+  res.send('welcome to leetcode api docs will be available soon xd');
 });
 
 app.get('/query', async (req, res) => {
