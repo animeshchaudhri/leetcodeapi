@@ -36,7 +36,7 @@ app.get('/query', async (req, res) => {
   if (companies) {
     const regex = new RegExp(companies, 'i');
     query = { companies: regex };
-    query = { companies: { $in: [specific] } };
+    query = { companies: { $in: [companies] } };
   }
   try {
     const result = await collection.find(query).toArray();
@@ -52,9 +52,11 @@ app.get('/query', async (req, res) => {
 app.get('/specific', async (req, res) => {
   const { companies } = req.query;
   let query = {};
+
   if (companies) {
-  query = { companies: { $in: [specific] } };
+    query = { companies: { $in: [companies] } };
   }
+
   try {
     const result = await collection.find(query).toArray();
     res.json(result);
