@@ -4,44 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <title>LeetCode API Documentation</title>
+  <title>LC_Grind API Documentation</title>
 </head>
 <body class="container mt-5">
   <h1 class="mb-4">LC_Grind API Documentation</h1>
   
+  <!-- Company-wise Questions Endpoint -->
   <div class="card">
     <div class="card-body">
       <h2 class="card-title">Company-wise Questions</h2>
       <p class="card-text">Retrieve questions specific to a company.</p>
-      <code>/specific?companies={companyName}</code>
+      <!-- Documentation for /specific endpoint -->
+      <code>Request Type: GET</code><br>
+      <code>Endpoint: /specific?companies={companyName}</code><br>
       <p class="card-text mt-2">Example:</p>
       <code>/specific?companies=Google</code>
     </div>
   </div>
 
+  <!-- Query Questions by Company Endpoint -->
   <div class="card mt-4">
     <div class="card-body">
       <h2 class="card-title">Query Questions by Company</h2>
       <p class="card-text">Query questions based on one or more companies.</p>
-      <code>/query?companies={companyName}</code>
+      <!-- Documentation for /query endpoint -->
+      <code>Request Type: GET</code><br>
+      <code>Endpoint: /query?companies={companyName}</code><br>
       <p class="card-text mt-2">Example:</p>
       <code>/query?companies=Google</code>
     </div>
   </div>
 
+  <!-- Difficulty Levels Endpoint -->
   <div class="card mt-4">
     <div class="card-body">
       <h2 class="card-title">Difficulty Levels</h2>
       <p class="card-text">Retrieve questions based on difficulty.</p>
+      <!-- Documentation for /easy, /medium, and /hard endpoints -->
       <ul>
-        <li><code>/easy</code> - Easy questions</li>
-        <li><code>/medium</code> - Medium questions</li>
-        <li><code>/hard</code> - Hard questions</li>
+        <li><code>Request Type: GET</code> - Easy questions (Endpoint: /easy)</li>
+        <li><code>Request Type: GET</code> - Medium questions (Endpoint: /medium)</li>
+        <li><code>Request Type: GET</code> - Hard questions (Endpoint: /hard)</li>
       </ul>
       <p class="card-text mt-2">Examples:</p>
       <code>/easy</code><br>
       <code>/medium</code><br>
       <code>/hard</code>
+    </div>
+  </div>
+
+  <!-- Add User or Update Questions Endpoint -->
+  <div class="card mt-4">
+    <div class="card-body">
+      <h2 class="card-title">Add User or Update Questions</h2>
+      <p class="card-text">Add a new user or update questions for an existing user.</p>
+      <!-- Documentation for /add endpoint -->
+      <code>Request Type: POST</code><br>
+      <code>Endpoint: /add</code><br>
+      <p class="card-text mt-2">Example Request Body:</p>
+      <code>{ "user_id": "userId123", "question_ids": ["questionId1", "questionId2"] }</code>
+    </div>
+  </div>
+
+  <!-- Delete Question Endpoint -->
+  <div class="card mt-4">
+    <div class="card-body">
+      <h2 class="card-title">Delete Question</h2>
+      <p class="card-text">Delete a question for a specific user.</p>
+      <!-- Documentation for /delete-question endpoint -->
+      <code>Request Type: POST</code><br>
+      <code>Endpoint: /delete-question</code><br>
+      <p class="card-text mt-2">Example Request Body:</p>
+      <code>{ "user_id": "userId123", "question_id": "questionId1" }</code>
+    </div>
+  </div>
+
+  <!-- Search Endpoint -->
+  <div class="card mt-4">
+    <div class="card-body">
+      <h2 class="card-title">Search</h2>
+      <p class="card-text">Search for user's questions.</p>
+      <!-- Documentation for /search endpoint -->
+      <code>Request Type: GET</code><br>
+      <code>Endpoint: /search?user_id={userId}</code><br>
+      <p class="card-text mt-2">Example:</p>
+      <code>/search?user_id=userId123</code>
     </div>
   </div>
 
